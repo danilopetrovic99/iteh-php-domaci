@@ -16,6 +16,7 @@
 
         <div class="meni">
             <a href="zivotinje.php"><button class="btn btn-light" id="dio_zivotinje">Dodaj/Izmeni/Obriši životinju</button></a>
+            <a href="pretrazisort.php"><button class="btn btn-light" id="dio_zivotinje">Pretraži/Sortiraj životinje</button></a>
         </div>
 
     </div>

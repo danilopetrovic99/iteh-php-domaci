@@ -6,7 +6,7 @@ body {
     width: 400px;
     height: 80px;
     margin-top: 250px;
-    margin-left: 450px;
+    margin-left: 50px;
     border-radius: 50px;
 }
 
@@ -29,4 +29,28 @@ body {
 
 .form-group {
     margin-bottom: 15px;
+}
+
+.meni {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#zivotinje-tabela-pretraga-sort {
+    color: white;
+    width: 900px;
+    height: auto;
+}
+
+.pretraga-polja {
+    margin-bottom: 15px;
+}
+
+#input-pretraga {
+    width: 250px;
+    height: 33px;
+}
+
+h4 {
+    color: white;
 }
