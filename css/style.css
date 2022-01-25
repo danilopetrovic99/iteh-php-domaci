@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 body {
     background-color: #34568B;
 }
@@ -11,7 +15,7 @@ body {
 }
 
 .zivotinje-tabela-div {
-    margin-top: 70px;
+    margin-top: 20px;
     margin-left: 500px;
 }
 
@@ -42,14 +46,14 @@ body {
     height: auto;
 }
 
-.pretraga-polja {
-    margin-bottom: 15px;
-}
 
 #input-pretraga {
-    width: 250px;
+    width: 280px;
     height: 33px;
+    margin-top: 10px;
+    margin-left: 790px;
 }
+
 
 h4 {
     color: white;
