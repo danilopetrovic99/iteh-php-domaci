@@ -54,7 +54,7 @@
                             <td>
                                 <button type="button" class="btn btn-success" id="add-button" data-bs-toggle="modal" data-bs-target="#nova">Dodaj</button>
                                 <button type="button" class="btn btn-light" id="edit-button">Izmeni</button>
-                                <button type="button" class="btn btn-danger" id="dlt-button">Obriši</button>
+                                <a href="obrisi_zivotinju.php?id=<?php echo $zivotinja['id'] ?>"> <button type="button" class="btn btn-danger" id="dlt-button">Obriši</button></a>
                             </td>
                         </tr>
 
