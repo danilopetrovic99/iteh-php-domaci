@@ -30,13 +30,16 @@
                 <tbody class="text-center">
                     <?php
 
-                    $query = "select ziv.id, ziv.ime, ziv.tip, ziv.godine, zoo.naziv, zoo.adresa, d.ime_drzave from zivotinja ziv join zoo zoo on ziv.zoo_id = zoo.id join drzava d on zoo.drzava_id = d.id";
+                    $query = "select ziv.id, ziv.ime, ziv.tip, ziv.godine, zoo.naziv, zoo.adresa, d.ime_drzave from zivotinja ziv join zoo zoo on ziv.zoo_id = zoo.id join drzava d on zoo.drzava_id = d.id order by ziv.id desc";
                     $hostname = "localhost";
                     $username = "root";
                     $password = "";
                     $baza = "zoovrt";
                     $connection = new mysqli($hostname, $username, $password, $baza) or die("Connect failed: %s\n" . $connection->error);
                     $rezultat = $connection->query($query);
+
+                    include 'modal_nova.php';
+                    require 'zivotinja.php';
 
                     while ($zivotinja = mysqli_fetch_assoc($rezultat)) {
                     ?>
@@ -49,18 +52,38 @@
                             <td><?php echo $zivotinja['adresa'] ?></td>
                             <td><?php echo $zivotinja['ime_drzave'] ?></td>
                             <td>
-                                <button type="button" class="btn btn-success" id="add-button">Dodaj</button>
+                                <button type="button" class="btn btn-success" id="add-button" data-bs-toggle="modal" data-bs-target="#nova">Dodaj</button>
                                 <button type="button" class="btn btn-light" id="edit-button">Izmeni</button>
                                 <button type="button" class="btn btn-danger" id="dlt-button">Obriši</button>
                             </td>
                         </tr>
-                    <?php } ?>
+
+
+                    <?php }
+
+                    if (isset($_POST['save-button'])) {
+
+                        $zivotinja = new Zivotinja();
+
+                        if ($zivotinja->dodajZivotinju(null, $_POST['ime'], $_POST['tip'], $_POST['godine'], $_POST['zoo'])) {
+                            $script = "<script>
+                            window.location = 'zivotinje.php';</script>";
+                            echo $script;
+                        } else {
+                            echo 'Greška!';
+                        }
+                    }
+
+                    ?>
                 </tbody>
             </table>
         </div>
 
     </div>
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

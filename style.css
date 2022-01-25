@@ -26,3 +26,7 @@ body {
     margin-top: 50px;
     margin-left: 740px;
 }
+
+.form-group {
+    margin-bottom: 15px;
+}
