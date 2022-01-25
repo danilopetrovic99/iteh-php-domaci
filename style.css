@@ -1,0 +1,28 @@
+body {
+    background-color: #34568B;
+}
+
+#dio_zivotinje {
+    width: 400px;
+    height: 80px;
+    margin-top: 250px;
+    margin-left: 450px;
+    border-radius: 50px;
+}
+
+.zivotinje-tabela-div {
+    margin-top: 70px;
+    margin-left: 500px;
+}
+
+#zivotinje-tabela {
+    color: white;
+    height: 100px;
+    width: 1000px;
+}
+
+#naslov-zivotinje {
+    color: white;
+    margin-top: 50px;
+    margin-left: 740px;
+}
