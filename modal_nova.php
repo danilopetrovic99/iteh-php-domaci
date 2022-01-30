@@ -37,9 +37,6 @@
                     <button type="submit" class="btn btn-success" name="save-button">Dodaj životinju</button>
                 </form>
             </div>
-            <div class="modal-footer">
-
-            </div>
         </div>
     </div>
 </div>

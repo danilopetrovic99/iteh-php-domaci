@@ -58,3 +58,15 @@ body {
 h4 {
     color: white;
 }
+
+#update-zivotinja {
+    width: 450px;
+    margin-top: 50px;
+    margin-left: 700px;
+}
+
+#update_button_frm {
+    margin-top: 5px;
+    width: 120px;
+
+}
